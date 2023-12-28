@@ -44,7 +44,7 @@
         <section class="section main-section">
             <div class="container">
                 <div class="main-section__content">
-                    <div class="main-section__text-wrapper">
+                    <div class="main-section__welcome-text">
                         <h1 class="main-section__title">Partner with Magic, Profit with Mystiwin!</h1>
 
                         <div class="main-section__indicators">
@@ -67,6 +67,9 @@
                             <picture class="parallax-layer" data-depth="0.1">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/mandala.png') %>" alt="" title="">
                             </picture><!--mandala-->
+                            <picture class="parallax-layer" data-depth="0.1">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money.png') %>" alt="" title="">
+                            </picture><!--money-->
                             <picture class="parallax-layer" data-depth="0.2">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/cards.png') %>" alt="" title="">
                             </picture><!--cards-->
@@ -89,9 +92,9 @@
                     </div>
 
                     <div class="main-section__description">
-                        <p><a href="#">MystiWin</a> is a casino that goes beyond the ordinary. It creates an exclusive community where the chosen reveal their victories. Join us
+                        <p class="main-section__text"><a href="#">MystiWin</a> is a casino that goes beyond the ordinary. It creates an exclusive community where the chosen reveal their victories. Join us
                             for an enriching experience where mystery and enjoyment take center stage.</p>
-                        <p>At the heart of <a href="#">MystiWin</a> lies a dedication to crafting an immersive and trustworthy gaming sanctuary, a place where players discover the
+                        <p class="main-section__text">At the heart of <a href="#">MystiWin</a> lies a dedication to crafting an immersive and trustworthy gaming sanctuary, a place where players discover the
                             thrill of the unknown and the joy of unraveled secrets. Our vision is to be the beacon of innovation in the gaming industry, offering a platform that
                             constantly evolves and delights our community.</p>
                     </div>
@@ -377,12 +380,6 @@
         </div>
     </footer>
     <!-- FOOTER END -->
-</div>
-
-<div class="preload-wrapper">
-    <div class="icon-load">
-        <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
-    </div>
 </div>
 <!-- BODY END   -->
 </body>

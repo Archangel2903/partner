@@ -1,2 +1,46 @@
 $fonts-path: '../fonts/';
 
+@font-face {
+  font-family:'Inter';
+  src: url('#{$fonts-path}Inter Black.eot');
+  src: url('#{$fonts-path}Inter Black.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Inter Black.woff2') format('woff2'),
+  url('#{$fonts-path}Inter Black.woff') format('woff'),
+  url('#{$fonts-path}Inter Black.ttf') format('truetype'),
+  url('#{$fonts-path}Inter Black.svg#Inter Black') format('svg');
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-E114;
+}
+
+@font-face {
+  font-family:'Inter';
+  src: url('#{$fonts-path}Inter Bold.eot');
+  src: url('#{$fonts-path}Inter Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Inter Bold.woff2') format('woff2'),
+  url('#{$fonts-path}Inter Bold.woff') format('woff'),
+  url('#{$fonts-path}Inter Bold.ttf') format('truetype'),
+  url('#{$fonts-path}Inter Bold.svg#Inter Bold') format('svg');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-E114;
+}
+
+@font-face {
+  font-family:'Inter';
+  src: url('#{$fonts-path}Inter Regular.eot');
+  src: url('#{$fonts-path}Inter Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Inter Regular.woff2') format('woff2'),
+  url('#{$fonts-path}Inter Regular.woff') format('woff'),
+  url('#{$fonts-path}Inter Regular.ttf') format('truetype'),
+  url('#{$fonts-path}Inter Regular.svg#Inter Regular') format('svg');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-E114;
+}

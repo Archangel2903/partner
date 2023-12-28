@@ -16,7 +16,7 @@ $input-placeholder-color: #aaa;
 $gradient-bg: radial-gradient(36.02% 50% at 50% 50%, #050049 0%, #0C0D12 100%);
 
 // fonts
-$font-family-base: 'Verdana', sans-serif;
+$font-family-base: 'Inter', sans-serif;
 $font-family-custom: 'Arial', sans-serif;
 $font-family-unique: 'Times New Roman', serif;
 
@@ -35,3 +35,18 @@ $transition-base: all .3s ease 0s;
 $enable-shadows: true;
 $grid-gutter-width: 40px;
 $body-color: $text-color;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 320px,
+        md: 767px,
+        lg: 920px,
+        xl: 1360px,
+);
+
+$container-max-widths: (
+        sm: 100%,
+        md: 100%,
+        lg: 1200px,
+        xl: 1520px,
+);

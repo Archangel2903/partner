@@ -10,6 +10,10 @@
   min-width: 320px;
 }
 
-.main-slider {
-
-}
+@import "./modules/section-main";
+@import "./modules/section-about-us";
+@import "./modules/section-decor";
+@import "./modules/section-commission";
+@import "./modules/section-faq";
+@import "./modules/section-reviews";
+@import "./modules/section-contact-us";

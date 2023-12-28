@@ -1,0 +1,143 @@
+.main-section {
+  padding: 224px 0 0;
+  background: $gradient-bg;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+    z-index: 0;
+  }
+  &__welcome-text {
+    width: 50%;
+    padding: 32px 132px 32px 0;
+  }
+  &__title {
+    margin: 0 0 48px;
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  &__indicators {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+
+    &-block {
+      &:not(:last-child) {
+        margin-right: 96px;
+      }
+    }
+    &-title {
+      margin: 0 0 24px;
+      color: #F79A00;
+      font-size: 28px;
+      font-weight: 900;
+    }
+    &-text {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    &-val {
+      margin: 0;
+      color: $main-second-color;
+      font-size: 72px;
+      font-weight: 900;
+
+      span {
+        font-size: 48px;
+      }
+    }
+  }
+  &__scene {
+    width: 50%;
+    max-width: 422px;
+    position: relative;
+    z-index: -1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      display: block;
+      width: 375px;
+      height: 375px;
+      border-radius: 100%;
+      background: #0500FF;
+      filter: blur(150px);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background: #E223C3;
+      filter: blur(130px);
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    #scene {
+      width: 422px;
+      height: 422px;
+    }
+    .parallax-layer {
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:nth-child(6) {
+        img {
+          top: 110%;
+          left: 0%;
+          transform: translate(0, 0);
+        }
+      }
+      &:nth-child(7) {
+        img {
+          top: 90%;
+          left: 48%;
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+  &__description {
+    position: relative;
+    max-width: 1050px;
+    padding: 40px;
+    margin: 150px auto 0;
+    background: #0c0d12;
+    border: 2px solid #F79A00;
+    border-radius: 48px;
+    z-index: 0;
+
+    p {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 33px;
+      &:not(last-child) {
+        margin: 0 0 32px;
+      }
+
+      a {
+        color: $main-second-color;
+      }
+    }
+  }
+}
