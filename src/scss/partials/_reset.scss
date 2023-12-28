@@ -19,6 +19,7 @@ html, body {
   text-size-adjust: none;
   font-family: $font-family-base;
   font-size: $font-size-default;
+  background: var(--black);
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
@@ -35,7 +36,8 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @include transition($transition-base);
   &:hover {
-    //text-decoration: underline;
+    color: inherit;
+    text-decoration: none;
   }
   &:active,
   &:focus,
@@ -306,17 +308,17 @@ iframe {
 ::selection {
   text-shadow: none;
   color: $text-color;
-  background: $main-first-color;
+  background: $main-second-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
   color: $text-color;
-  background: $main-first-color;
+  background: $main-second-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
   color: $text-color;
-  background: $main-first-color;
+  background: $main-second-color;
 }

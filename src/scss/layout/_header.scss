@@ -4,8 +4,70 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position: relative;
+  position: fixed;
   min-width: 320px;
   width: 100%;
   z-index: 100;
+}
+
+.header {
+  padding: 24px 0;
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: auto;
+
+    &-link {
+      img {}
+    }
+  }
+  &__navigation {
+    padding: 16px 12px;
+    margin: 0 10px 0 0;
+
+    &-list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      padding: 13px 28px;
+      margin: 0;
+    }
+    &-item {
+      &:not(:last-child) {
+        margin: 0 40px 0 0;
+      }
+    }
+    &-link {
+      color: $main-second-color;
+      font-weight: 700;
+    }
+  }
+  &__registration {
+    &-wrap {
+
+    }
+
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-width: 196px;
+    padding: 12px 0;
+    background: $main-second-color;
+    border-radius: 100px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
 }

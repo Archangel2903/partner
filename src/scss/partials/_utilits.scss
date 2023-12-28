@@ -100,7 +100,20 @@
   }
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: $font-weight-normal;
+.title-section {
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  span {
+    color: #ffffff;
+  }
+}
+
+.nav-blur-style {
+  padding: 12px;
+  background: rgba(65, 65, 65, 0.30);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 1000px;
 }
