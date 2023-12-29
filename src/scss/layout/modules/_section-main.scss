@@ -125,19 +125,21 @@
     background: #0c0d12;
     border: 2px solid #F79A00;
     border-radius: 48px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
     z-index: 0;
 
-    p {
-      font-size: 22px;
-      font-weight: 400;
-      line-height: 33px;
-      &:not(last-child) {
+    * {
+      &:not(:last-child) {
         margin: 0 0 32px;
       }
-
-      a {
-        color: $main-second-color;
+      &:last-child {
+        margin: 0;
       }
+    }
+    a {
+      color: $main-second-color;
     }
   }
 }

@@ -52,7 +52,7 @@
     content: '';
     @extend .section-bg;
     opacity: .25;
-    //background: $main-first-color-custom;
+    //background: #000;
     z-index: 0;
   }
 
@@ -65,8 +65,11 @@
 }
 
 .title-section {
+  margin: 0 0 40px;
+  color: $main-second-color;
   font-size: 56px;
   font-weight: 900;
+  text-align: center;
   text-transform: uppercase;
 
   span {

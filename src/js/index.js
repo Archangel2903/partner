@@ -2,7 +2,8 @@ import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
 import 'jquery-ui'
-import 'jquery-ui/ui/effect'
+import 'jquery-ui/ui/effect';
+import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
 import Parallax from "parallax-js";
@@ -19,6 +20,29 @@ $(window).on('load', function () {
     }
 
     pw.fadeOut(300);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('header a/*[href^="#"]*/');
+
+    links.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+            else {
+                return;
+            }
+        });
+    });
 });
 
 $(function () {
@@ -55,6 +79,20 @@ $(function () {
     if ($('#scene').length) {
         const scene = document.getElementById('scene');
         const parallaxInstance = new Parallax(scene);
+    }
+
+    // Tabs
+    if ($('#tabs').length) {
+        $('#tabs').tabs({
+            show: {
+                effect: 'slideDown',
+                duration: 300,
+            },
+            hide: {
+                effect: 'slideUp',
+                duration: 300,
+            },
+        });
     }
 
     // Lazy load observer

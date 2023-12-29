@@ -2,18 +2,22 @@
   --black: #000;
   --white: #fff;
   --gold: #F5B832;
+  --blue: #050049;
+  --black-bg: #0c0d12;
+  --gray-bg: #18191E;
 }
 
 // main colors
 $main-first-color: #7a0000;
 $main-second-color: var(--gold);
-$main-third-color: #000082;
+$main-third-color: var(--blue);
 
 // colors
 $title-color: #111;
 $text-color: var(--white);
 $input-placeholder-color: #aaa;
-$gradient-bg: radial-gradient(36.02% 50% at 50% 50%, #050049 0%, #0C0D12 100%);
+$color-bg: var(--black-bg);
+$gradient-bg: radial-gradient(36.02% 50% at 50% 50%, $main-third-color 0%, $color-bg 100%);
 
 // fonts
 $font-family-base: 'Inter', sans-serif;
@@ -48,5 +52,5 @@ $container-max-widths: (
         sm: 100%,
         md: 100%,
         lg: 1200px,
-        xl: 1520px,
+        xl: 1600px,
 );
