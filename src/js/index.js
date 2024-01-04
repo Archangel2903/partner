@@ -24,7 +24,7 @@ $(window).on('load', function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('header a[href^="#"]:not([href="#"])');
+    const links = document.querySelectorAll('a[href^="#"]:not([href="#"])');
 
     links.forEach(link => {
         link.addEventListener("click", function (e) {
