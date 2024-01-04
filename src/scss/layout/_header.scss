@@ -54,20 +54,5 @@ header.header {
     &-wrap {
 
     }
-
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    min-width: 196px;
-    padding: 12px 0;
-    background: $main-second-color;
-    border-radius: 100px;
-    color: var(--white);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: center;
   }
 }

@@ -3,6 +3,7 @@ import 'intersection-observer';
 import $ from 'jquery';
 import 'jquery-ui'
 import 'jquery-ui/ui/effect';
+import 'jquery-ui/ui/widgets/accordion';
 import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
@@ -23,7 +24,7 @@ $(window).on('load', function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('header a/*[href^="#"]*/');
+    const links = document.querySelectorAll('header a[href^="#"]:not([href="#"])');
 
     links.forEach(link => {
         link.addEventListener("click", function (e) {
@@ -57,20 +58,20 @@ $(function () {
                 observeParents: true,
                 loop: true,
                 autoplay: true,
-                spaceBetween: 25,
-                slidesPerView: 1,
+                spaceBetween: 40,
+                slidesPerView: 2,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
                 },
                 pagination: {
                     el: '.swiper-pagination',
+                    // dynamicBullets: true,
                     clickable: true
                 },
                 /*scrollbar: {
                     el: '.swiper-scrollbar',
                 },*/
-                dynamicBullets: true,
             });
         }
     }
@@ -85,15 +86,36 @@ $(function () {
     if ($('#tabs').length) {
         $('#tabs').tabs({
             show: {
-                effect: 'slideDown',
+                effect: 'fadeIn',
                 duration: 300,
             },
             hide: {
-                effect: 'slideUp',
+                effect: 'fadeOut',
                 duration: 300,
             },
         });
     }
+
+    // Accordion
+    (function () {
+        const faqBox = $('.faq-section__block');
+
+        faqBox.each((i, el) => {
+            if ($(el).hasClass('active')) {
+                $(el).find('.faq-section__block-body').slideDown()
+            }
+            else {
+                $(el).find('.faq-section__block-body').slideUp()
+            }
+        });
+
+        const faqToggler = $('.faq-section__block-head');
+
+        faqToggler.on('click', function() {
+            $(this).parent().toggleClass('active');
+            $(this).next('.faq-section__block-body').stop().slideToggle(300);
+        });
+    })();
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');

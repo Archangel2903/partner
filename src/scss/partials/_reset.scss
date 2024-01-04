@@ -117,16 +117,17 @@ button, input, textarea {
 }
 
 input {
+  height: auto;
   transition: $transition-base;
 
   &[type="text"], &[type="email"], &[type="password"], &[type="number"], &[type="tel"], &[type="search"], &[type="datetime"], &[type="url"] {
     cursor: auto;
-    padding: 0 5px;
+    //padding: 0 5px;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
 
     &:focus {
-      background: none;
+      background: var(--white);
 
       &::-webkit-input-placeholder {
         color: transparent;

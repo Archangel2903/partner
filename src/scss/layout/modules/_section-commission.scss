@@ -27,17 +27,24 @@
           margin: 0;
 
           &::after {
-            content: '';
+            content: '\1403';
             position: absolute;
             left: 50%;
             bottom: 0;
-            border-top: 0 solid transparent;
-            border: 11px solid transparent;
-            border-bottom: 15px solid $main-second-color;
-            transform: translateX(-50%) scale(0);
+            opacity: 0;
+            visibility: hidden;
+            color: $main-second-color;
+            font-size: 26px;
+            transform: translateX(-50%);
             transition: $transition-base;
           }
-
+          &:hover {
+            &::after {
+              opacity: 1;
+              visibility: visible;
+              animation: bottomBounce 1.2s infinite alternate ease-in-out .3s;
+            }
+          }
           &:nth-child(1) {
             .commission-section__button::before {
               background: url('../img/step_1.png') no-repeat center;
@@ -68,7 +75,15 @@
             }
 
             &::after {
-              transform: translateX(-50%) scale(1);
+              content: '\25B2';
+              opacity: 1;
+              visibility: visible;
+              transform: translateX(-50%);
+            }
+            &:hover {
+              &::after {
+                animation: none;
+              }
             }
           }
         }
@@ -152,7 +167,7 @@
           .commission-section__tab-content {
             padding: 40px 0 0;
             border-top: 1px solid transparent;
-            background: linear-gradient(to right, transparent, #F5B832, transparent);
+            background: linear-gradient(to right, transparent, $main-second-color, transparent);
             position: relative;
             z-index: 0;
 
@@ -167,7 +182,6 @@
               z-index: -1;
             }
           }
-
         }
       }
     }
