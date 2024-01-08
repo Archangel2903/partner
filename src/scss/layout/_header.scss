@@ -50,9 +50,10 @@ header.header {
       font-weight: 700;
     }
   }
-  &__registration {
-    &-wrap {
-
+  &__right-buttons {}
+  &__button {
+    &:not(:last-child) {
+      margin-right: 10px;
     }
   }
 }

@@ -7,6 +7,8 @@ import 'jquery-ui/ui/widgets/accordion';
 import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
+import "select2";
+import intlTelInput from 'intl-tel-input';
 import Parallax from "parallax-js";
 import Swiper from 'swiper/dist/js/swiper.min';
 
@@ -38,8 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: targetElement.offsetTop,
                     behavior: "smooth"
                 });
-            }
-            else {
+            } else {
                 return;
             }
         });
@@ -96,6 +97,16 @@ $(function () {
         });
     }
 
+    // Select2
+    (function () {
+        let selectStyled = $('.select2');
+
+        selectStyled.select2({
+            minimumResultsForSearch: Infinity,
+            // dropdownParent: $('.dropdown-wrapper'),
+        });
+    })();
+
     // Accordion
     (function () {
         const faqBox = $('.faq-section__block');
@@ -103,15 +114,14 @@ $(function () {
         faqBox.each((i, el) => {
             if ($(el).hasClass('active')) {
                 $(el).find('.faq-section__block-body').slideDown()
-            }
-            else {
+            } else {
                 $(el).find('.faq-section__block-body').slideUp()
             }
         });
 
         const faqToggler = $('.faq-section__block-head');
 
-        faqToggler.on('click', function() {
+        faqToggler.on('click', function () {
             $(this).parent().toggleClass('active');
             $(this).next('.faq-section__block-body').stop().slideToggle(300);
         });
@@ -135,4 +145,24 @@ $(function () {
             imgObserve.observe(image);
         });
     }
+});
+
+// Инициализация intl-tel-input
+$(function () {
+    var input = document.querySelector("#phone");
+    var iti = intlTelInput(input, {
+        separateDialCode: true,
+        utilsScript: "../../node_modules/intl-tel-input/build/js/utils.js",
+        initialCountry: "in",
+    });
+
+    // Обработчик события изменения страны
+    iti.promise.then(function () {
+        $("#countryCode").val(iti.getSelectedCountryData().dialCode);
+    });
+
+    // Обработчик события изменения телефонного номера
+    input.addEventListener("change", function () {
+        $("#countryCode").val(iti.getSelectedCountryData().dialCode);
+    });
 });

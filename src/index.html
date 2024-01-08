@@ -31,8 +31,9 @@
                     </ul>
                 </nav>
 
-                <div class="header__registration-wrap nav-blur-style">
-                    <a href="#" class="header__registration btn btn-primary">Registration</a>
+                <div class="header__right-buttons nav-blur-style">
+                    <a href="#" class="header__button btn btn-primary" data-toggle="modal" data-target="#registrationModal">Registration</a>
+                    <button type="button" class="header__button btn btn-primary" data-toggle="modal" data-target="#signinModal"><span>Sign in</span></button>
                 </div>
             </div>
         </div>
@@ -446,7 +447,7 @@
 
                     <p class="contact-section__text">After you sign up, our manager will contact you to answer all your questions and help you get started!</p>
 
-                    <form action="POST" class="contact-section__form">
+                    <form action="" method="post" class="contact-section__form">
                         <div class="form-group">
                             <label class="w-100">
                                 <input type="text" class="form-control" placeholder="Name">
@@ -467,7 +468,12 @@
                             </label>
                         </div>
 
-                        <input type="submit" class="btn btn-primary btn-lg text-uppercase" value="Send a message">
+                        <button type="submit" class="btn btn-primary btn-lg text-uppercase">
+                            Send a message
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-arrow-r"></use>
+                            </svg>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -506,6 +512,306 @@
         </div>
     </footer>
     <!-- FOOTER END -->
+</div>
+
+<div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+                <form action="" method="post">
+                    <label class="form-group w-100">
+                        <span class="input-label">Login</span>
+                        <input type="text" class="form-control" placeholder=" ">
+                        <span class="input-text"></span>
+                    </label>
+
+                    <label class="form-group w-100">
+                        <span class="input-label">Password</span>
+                        <input type="password" class="form-control" placeholder=" ">
+                        <span class="input-text"></span>
+                    </label>
+
+                    <div class="d-flex flex-column flex-wrap align-content-center align-items-center">
+                        <a href="#" data-toggle="modal" data-target="#resetPassModal">Forgot your password?</a>
+                        <button type="submit" class="btn btn-primary btn-lg text-uppercase">
+                            Sign in
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-arrow-r"></use>
+                            </svg>
+                        </button>
+                        <a href="#" data-toggle="modal" data-target="#registrationModal">Registration</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="resetPassModal" tabindex="-1" aria-labelledby="resetPassModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+                <form action="" method="post">
+                    <label class="form-group w-100">
+                        <span class="input-label">Login</span>
+                        <input type="text" class="form-control" placeholder=" ">
+                        <span class="input-text"></span>
+                    </label>
+
+                    <label class="form-group w-100">
+                        <span class="input-label">Email</span>
+                        <input type="email" class="form-control" placeholder=" ">
+                        <span class="input-text"></span>
+                    </label>
+
+                    <div class="d-flex flex-column flex-wrap align-content-center align-items-center">
+                        <button type="submit" class="btn btn-primary btn-lg text-uppercase">
+                            Reset password
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-arrow-r"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade registration-modal" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="modal-body">
+                <form action="" method="post" class="registration-form">
+                    <div class="row">
+                        <div class="col">
+                            <fieldset>
+                                <p class="registration-form__title-group">Username and password</p>
+
+                                <label class="form-group w-100">
+                                    <span class="input-label">Login *</span>
+                                    <input type="text" class="form-control" placeholder=" ">
+                                    <span class="input-text"></span>
+                                </label>
+
+                                <label class="form-group w-100">
+                                    <span class="input-label">Password *</span>
+                                    <input type="password" class="form-control" placeholder=" ">
+                                    <span class="input-text"></span>
+                                </label>
+
+                                <label class="form-group w-100">
+                                    <span class="input-label">Re-enter your password *</span>
+                                    <input type="password" class="form-control" placeholder=" ">
+                                    <span class="input-text"></span>
+                                </label>
+                            </fieldset>
+
+                            <fieldset>
+                                <p class="registration-form__title-group">Additional information</p>
+
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">Website *</span>
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">Site category *</span>
+                                            <select class="select2 js-example-placeholder-single" style="width: 100%">
+                                                <option>Select ...</option>
+                                                <option value="01">option 01</option>
+                                                <option value="02">option 02</option>
+                                                <option value="03">option 03</option>
+                                                <option value="04">option 04</option>
+                                                <option value="05">option 05</option>
+                                            </select>
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">Preferred language *</span>
+                                            <select class="select2 js-example-placeholder-single" style="width: 100%">
+                                                <option>Select ...</option>
+                                                <option value="01">option 01</option>
+                                                <option value="02">option 02</option>
+                                                <option value="03">option 03</option>
+                                                <option value="04">option 04</option>
+                                                <option value="05">option 05</option>
+                                            </select>
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">How did you find us?</span>
+                                            <select class="select2 js-example-placeholder-single" style="width: 100%">
+                                                <option>Select ...</option>
+                                                <option value="01">option 01</option>
+                                                <option value="02">option 02</option>
+                                                <option value="03">option 03</option>
+                                                <option value="04">option 04</option>
+                                                <option value="05">option 05</option>
+                                            </select>
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <p class="registration-form__title-group">Contact details</p>
+
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">First name *</span>
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">Surname *</span>
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <label class="form-group w-100">
+                                    <span class="input-label">Email *</span>
+                                    <input type="email" class="form-control" placeholder=" ">
+                                    <span class="input-text"></span>
+                                </label>
+
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">Messenger</span>
+                                            <select class="select2 js-example-placeholder-single" style="width: 100%">
+                                                <option>Select ...</option>
+                                                <option value="01">option 01</option>
+                                                <option value="02">option 02</option>
+                                                <option value="03">option 03</option>
+                                                <option value="04">option 04</option>
+                                                <option value="05">option 05</option>
+                                            </select>
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">Messenger username</span>
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">Country *</span>
+                                            <select class="select2 js-example-placeholder-single" style="width: 100%">
+                                                <option>Select ...</option>
+                                                <option value="01">option 01</option>
+                                                <option value="02">option 02</option>
+                                                <option value="03">option 03</option>
+                                                <option value="04">option 04</option>
+                                                <option value="05">option 05</option>
+                                            </select>
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="form-group w-100">
+                                            <label for="phone" class="input-label">Phone number</label>
+                                            <div class="phone-input-container">
+                                                <input type="tel" id="phone" name="phone" class="form-control" placeholder=" " required>
+                                                <input type="hidden" id="countryCode" name="countryCode">
+                                            </div>
+                                            <span class="input-text"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <p class="registration-form__title-group">Payment details</p>
+
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">Preferred payout method *</span>
+                                            <select class="select2 js-example-placeholder-single" style="width: 100%">
+                                                <option>Select ...</option>
+                                                <option value="01">option 01</option>
+                                                <option value="02">option 02</option>
+                                                <option value="03">option 03</option>
+                                                <option value="04">option 04</option>
+                                                <option value="05">option 05</option>
+                                            </select>
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <label class="form-group w-100">
+                                            <span class="input-label">User account *</span>
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="input-text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+
+                        <div class="col-12">
+                            <div class="registration-form__footer">
+                                <p class="form-text">The https://mystipartner.com/ website is used in accordance with the <a href="#">Mystipartner Terms and Conditions</a> and <a href="#">Mystipartner
+                                    Privacy Policy</a><br> The personal data that you supply when registering on this website may be shared with the Mystiwin affiliate companies in
+                                    different countries and third parties rendering services to Mystiwin</p>
+
+                                <label class="form-group">
+                                    <input type="checkbox">
+                                    <span class="checkbox">
+                                    <span class="checkbox__style">
+                                        <svg><use xlink:href="img/spritemap.svg#sprite-access"></use></svg>
+                                    </span>
+                                    <span class="checkbox__text">I have read, understood and accept the above Terms and Conditions and Privacy Policy</span>
+                                </span>
+                                </label>
+
+                                <div class="d-flex flex-column flex-wrap align-content-center align-items-center">
+                                    <button type="submit" class="btn btn-primary btn-lg text-uppercase">Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- BODY END   -->
 </body>

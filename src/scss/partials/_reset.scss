@@ -153,6 +153,7 @@ input {
     -moz-appearance: button;
   }
   &[type="checkbox"], &[type="radio"] {
+    display: none;
     padding: 0;
   }
   &[type="file"], &[type="color"], &[type="image"], &[type="range"] {

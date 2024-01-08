@@ -120,6 +120,13 @@
   line-height: 30px;
   text-align: center;
 
+  svg {
+    width: 0;
+    height: 24px;
+    fill: var(--white);
+    transition: $transition-base;
+  }
+
   &-lg {
     padding: 24px 32px;
   }
@@ -128,15 +135,32 @@
     background: $main-second-color;
     color: var(--white);
 
-    &:hover {
+    &:focus, &:hover {
       background: #f79a00;
+      box-shadow: none;
+    }
+  }
+
+  &:hover {
+    svg {
+      width: 24px;
+      margin-left: 16px;
     }
   }
 }
 
 form {
+  .input-label {
+    display: block;
+    margin: 4px 0;
+    color: #8b8c8e;
+  }
+
+  .form-group {
+  }
+
   .form-control {
-    height: auto;
+    height: 68px;
     padding: 16px;
     background: #242529;
     border: none;
@@ -157,6 +181,7 @@ form {
         box-shadow: inset 0 -4px 0 0 #3EB94A;
       }
     }
+
     &.error {
       &:not(:placeholder-shown) {
         background: var(--white);
@@ -165,18 +190,223 @@ form {
     }
   }
 
+  .form-text {
+    margin: 0 0 20px;
+  }
+
   textarea {
     min-height: 60px;
     max-height: 250px;
   }
+
+  a {
+    color: $main-second-color;
+  }
 }
 
-/* Animations */
-@keyframes bottomBounce {
-  from {
-    bottom: 0;
+input {
+  &[type="checkbox"] {
+    display: none !important;
+
+    & ~ .checkbox {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+
+      .checkbox {
+        &__style {
+          flex: 0 0 auto;
+          position: relative;
+          width: 20px;
+          height: 20px;
+          margin-right: 14px;
+          border: 1px solid #8B8C8E;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: $transition-base;
+
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            fill: var(--white);
+            transform: translate(-50%, -50%) scale(0);
+            transition: $transition-base;
+          }
+        }
+
+        &__text {
+          font-size: 16px;
+          line-height: 1;
+          user-select: none;
+        }
+      }
+    }
+
+    &:checked {
+      & ~ .checkbox {
+        .checkbox {
+          &__style {
+            svg {
+              transform: translate(-50%, -50%) scale(1);
+            }
+          }
+        }
+
+        &_toggle {
+          .checkbox__style {
+            background: #1b1b1b;
+
+            &::after {
+              left: calc(100% - 27px);
+              background: #fff;
+            }
+          }
+        }
+      }
+    }
   }
-  to {
-    bottom: 20px;
+}
+
+.iti {
+  width: 100%;
+
+  &__flag-container {
+  }
+
+  &__selected-flag {
+  }
+
+  &__flag {
+    &.iti__al {
+    }
+  }
+
+  &__selected-dial-code {
+    color: #545559;
+  }
+
+  &__arrow {
+  }
+
+  &__country-list {
+    background: #242529;
+    border: none;
+    overflow-y: auto;
+  }
+
+  &__country {
+    &.iti__highlight {
+    }
+  }
+
+  input {
+
+  }
+}
+
+.select2 {
+  &-container {
+    width: 100% !important;
+
+    .select2 {
+      &-selection--single {
+        width: 100%;
+        height: 68px;
+        background: #242529;
+
+        .select2-selection {
+          &__rendered {
+            padding: 18px 40px 18px 20px;
+          }
+
+          &__arrow {
+            b {}
+          }
+        }
+      }
+    }
+
+    &--default {
+      .select2 {
+        &-selection--single {
+          border: 1px solid #46474B;
+          border-radius: 4px;
+
+          .select2-selection {
+            &__rendered {
+              color: #5d5e61;
+              font-family: $font-family-base;
+              font-weight: 400;
+              line-height: 33px;
+            }
+
+            &__arrow {
+              right: 10px;
+              height: 100%;
+
+              b {}
+            }
+          }
+        }
+
+        &-container--open {
+          &.select2-container {
+            &--below {
+              .select2-selection {
+                &--single {
+                  border-radius: 4px 4px 0 0;
+                }
+              }
+            }
+
+            &--above {
+              .select2-selection {
+                &--single {
+                  border-radius: 0 0 4px 4px;
+                }
+              }
+            }
+          }
+        }
+
+        &-results {
+          &__options {
+
+          }
+
+          &__option {
+            &--selected {
+              background: #222327;
+            }
+
+            &--highlighted {
+              &.select2-results__option--selectable {
+                background: #18191e;
+              }
+            }
+          }
+        }
+      }
+
+      /* Animations */
+      @keyframes bottomBounce {
+        from {
+          bottom: 0;
+        }
+        to {
+          bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &-dropdown {
+    background: #242529;
+    border-color: #46474b;
   }
 }
