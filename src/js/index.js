@@ -23,8 +23,14 @@ $(window).on('load', function () {
     }
 
     pw.fadeOut(300);
+
+    $('.header__navigation-burger').on('click', function() {
+        $(this).toggleClass('header__navigation-burger_active');
+        $(this).next().toggleClass('header__navigation-list_open');
+    });
 });
 
+// animate scroll
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('nav a[href^="#"]:not([href="#"])');
 
@@ -98,17 +104,16 @@ $(function () {
     }
 
     // Select2
-    (function () {
+    if ($('.select2').length) {
         let selectStyled = $('.select2');
-
         selectStyled.select2({
             minimumResultsForSearch: Infinity,
             // dropdownParent: $('.dropdown-wrapper'),
         });
-    })();
+    }
 
     // Accordion
-    (function () {
+    if ($('.faq-section__block').length) {
         const faqBox = $('.faq-section__block');
 
         faqBox.each((i, el) => {
@@ -125,7 +130,27 @@ $(function () {
             $(this).parent().toggleClass('active');
             $(this).next('.faq-section__block-body').stop().slideToggle(300);
         });
-    })();
+    }
+
+    // intl-tel-input
+    if ($('#phone').length) {
+        let input = document.querySelector("#phone");
+        let iti = intlTelInput(input, {
+            separateDialCode: true,
+            utilsScript: "../../node_modules/intl-tel-input/build/js/utils.js",
+            initialCountry: "in",
+        });
+
+        // Обработчик события изменения страны
+        iti.promise.then(function () {
+            $("#countryCode").val(iti.getSelectedCountryData().dialCode);
+        });
+
+        // Обработчик события изменения телефонного номера
+        input.addEventListener("change", function () {
+            $("#countryCode").val(iti.getSelectedCountryData().dialCode);
+        });
+    }
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
@@ -145,24 +170,4 @@ $(function () {
             imgObserve.observe(image);
         });
     }
-});
-
-// Инициализация intl-tel-input
-$(function () {
-    var input = document.querySelector("#phone");
-    var iti = intlTelInput(input, {
-        separateDialCode: true,
-        utilsScript: "../../node_modules/intl-tel-input/build/js/utils.js",
-        initialCountry: "in",
-    });
-
-    // Обработчик события изменения страны
-    iti.promise.then(function () {
-        $("#countryCode").val(iti.getSelectedCountryData().dialCode);
-    });
-
-    // Обработчик события изменения телефонного номера
-    input.addEventListener("change", function () {
-        $("#countryCode").val(iti.getSelectedCountryData().dialCode);
-    });
 });

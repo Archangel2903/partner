@@ -47,6 +47,12 @@
     backdrop-filter: blur(25px);
     will-change: backdrop-filter;
   }
+
+  &-open {
+    .header {
+      padding-right: 17px;
+    }
+  }
 }
 
 .registration-modal {

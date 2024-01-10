@@ -12,30 +12,32 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container-fluid">
-            <div class="header__content">
-                <nav class="header__logo nav-blur-style">
-                    <a href="#main-section" class="header__logo-link">
-                        <picture>
-                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
-                        </picture>
-                    </a>
-                </nav>
+            <nav class="header__content">
+                <a href="#main-section" class="header__logo nav-blur-style">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
+                    </picture>
+                </a>
 
-                <nav class="header__navigation nav-blur-style">
+                <div class="header__navigation nav-blur-style">
+                    <button class="header__navigation-burger"><span></span></button>
+
                     <ul class="header__navigation-list">
                         <li class="header__navigation-item"><a href="#about-us-section" class="header__navigation-link">About</a></li>
                         <li class="header__navigation-item"><a href="#commission-section" class="header__navigation-link">Commission</a></li>
                         <li class="header__navigation-item"><a href="#faq-section" class="header__navigation-link">FAQ</a></li>
                         <li class="header__navigation-item"><a href="#reviews-section" class="header__navigation-link">Reviews</a></li>
                         <li class="header__navigation-item"><a href="#contacts-section" class="header__navigation-link">Contact</a></li>
+                        <li class="header__navigation-item d-xl-none"><a href="#" class="header__navigation-link" data-toggle="modal" data-target="#registrationModal">Registration</a></li>
+                        <li class="header__navigation-item d-xl-none"><a href="#" class="header__navigation-link" data-toggle="modal" data-target="#signinModal">Sign in</a></li>
                     </ul>
-                </nav>
-
-                <div class="header__right-buttons nav-blur-style">
-                    <a href="#" class="header__button btn btn-primary" data-toggle="modal" data-target="#registrationModal">Registration</a>
-                    <button type="button" class="header__button btn btn-primary" data-toggle="modal" data-target="#signinModal"><span>Sign in</span></button>
                 </div>
-            </div>
+
+                <div class="header__right-buttons nav-blur-style d-none d-md-block">
+                    <a href="#" class="header__button btn btn-primary" data-toggle="modal" data-target="#registrationModal">Registration</a>
+                    <!--<button type="button" class="header__button btn btn-primary" data-toggle="modal" data-target="#signinModal"><span>Sign in</span></button>-->
+                </div>
+            </nav>
         </div>
     </header>
     <!-- HEADER END -->

@@ -15,34 +15,101 @@ header.header {
 
   &__content {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-content: center;
     align-items: center;
   }
   &__logo {
+    padding: 24px 20px;
     margin-right: auto;
 
-    &-link {
-      img {}
+    img {
+      width: 180px;
     }
   }
   &__navigation {
-    padding: 16px 12px;
-    margin: 0 10px 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    padding: 24px;
+    margin-left: 10px;
+    order: 1;
 
+    &-burger {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      background: none;
+      border: none;
+      overflow: hidden;
+      outline: none !important;
+
+      &::before, &::after, span {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 20px;
+        height: 3px;
+        background: $main-second-color;
+        border-radius: 100px;
+        transform: translate(-50%, 0);
+        transition: $transition-base;
+      }
+      &::before {
+        top: 9px;
+      }
+      span {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &::after {
+        bottom: 9px;
+      }
+
+      &_active {
+        &::before {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-225deg);
+        }
+        span {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &::after {
+          top: 50%;
+          bottom: auto;
+          transform: translate(-50%, -50%) rotate(225deg);
+        }
+      }
+    }
     &-list {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      align-content: center;
-      align-items: center;
-      padding: 13px 28px;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      width: 320px;
+      padding: 35px 20px 35px 40px;
       margin: 0;
+      background: #18191e;
+      border: 1px solid #46474B;
+      border-radius: 40px;
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition-base;
+
+      &_open {
+        top: calc(100% + 12px);
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+      }
     }
     &-item {
       &:not(:last-child) {
-        margin: 0 40px 0 0;
+        margin: 0 0 30px 0;
       }
     }
     &-link {
@@ -54,6 +121,50 @@ header.header {
   &__button {
     &:not(:last-child) {
       margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .header {
+    &__logo {
+      padding: 12px;
+
+      img {
+        width: auto;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .header {
+    &__navigation {
+      padding: 16px 12px;
+      margin: 0 10px 0 0;
+      order: 0;
+
+      &-burger {
+        display: none;
+      }
+      &-list {
+        position: static;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        width: auto;
+        padding: 13px 28px;
+        background: none;
+        border: none;
+        opacity: 1;
+        visibility: visible;
+      }
+      &-item {
+        &:not(:last-child) {
+          margin: 0 40px 0 0;
+        }
+      }
     }
   }
 }

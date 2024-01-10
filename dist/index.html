@@ -5,37 +5,39 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.c34c30bf38c1e2303397.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.d289445fa1f6cc98c2fc.min.css" rel="stylesheet"></head>
 <body>
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
         <div class="container-fluid">
-            <div class="header__content">
-                <nav class="header__logo nav-blur-style">
-                    <a href="#main-section" class="header__logo-link">
-                        <picture>
-                            <img src="img/default.svg" data-src="img/logo.svg" alt="" title="">
-                        </picture>
-                    </a>
-                </nav>
+            <nav class="header__content">
+                <a href="#main-section" class="header__logo nav-blur-style">
+                    <picture>
+                        <img src="img/default.svg" data-src="img/logo.svg" alt="" title="">
+                    </picture>
+                </a>
 
-                <nav class="header__navigation nav-blur-style">
+                <div class="header__navigation nav-blur-style">
+                    <button class="header__navigation-burger"><span></span></button>
+
                     <ul class="header__navigation-list">
                         <li class="header__navigation-item"><a href="#about-us-section" class="header__navigation-link">About</a></li>
                         <li class="header__navigation-item"><a href="#commission-section" class="header__navigation-link">Commission</a></li>
                         <li class="header__navigation-item"><a href="#faq-section" class="header__navigation-link">FAQ</a></li>
                         <li class="header__navigation-item"><a href="#reviews-section" class="header__navigation-link">Reviews</a></li>
                         <li class="header__navigation-item"><a href="#contacts-section" class="header__navigation-link">Contact</a></li>
+                        <li class="header__navigation-item d-xl-none"><a href="#" class="header__navigation-link" data-toggle="modal" data-target="#registrationModal">Registration</a></li>
+                        <li class="header__navigation-item d-xl-none"><a href="#" class="header__navigation-link" data-toggle="modal" data-target="#signinModal">Sign in</a></li>
                     </ul>
-                </nav>
-
-                <div class="header__right-buttons nav-blur-style">
-                    <a href="#" class="header__button btn btn-primary" data-toggle="modal" data-target="#registrationModal">Registration</a>
-                    <button type="button" class="header__button btn btn-primary" data-toggle="modal" data-target="#signinModal"><span>Sign in</span></button>
                 </div>
-            </div>
+
+                <div class="header__right-buttons nav-blur-style d-none d-md-block">
+                    <a href="#" class="header__button btn btn-primary" data-toggle="modal" data-target="#registrationModal">Registration</a>
+                    <!--<button type="button" class="header__button btn btn-primary" data-toggle="modal" data-target="#signinModal"><span>Sign in</span></button>-->
+                </div>
+            </nav>
         </div>
     </header>
     <!-- HEADER END -->
@@ -814,5 +816,5 @@
     </div>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.c34c30bf38c1e2303397.min.js"></script></body>
+<script type="text/javascript" src="bundle.d289445fa1f6cc98c2fc.min.js"></script></body>
 </html>
