@@ -112,7 +112,7 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  border: none;
+  border: none !important;
   border-radius: 100px;
   padding: 13px 38px;
   font-size: 20px;
@@ -135,7 +135,13 @@
     background: $main-second-color;
     color: var(--white);
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
+      background: #f79a00;
+      box-shadow: none;
+    }
+
+    &:not(:disabled):not(.disabled):active {
       background: #f79a00;
       box-shadow: none;
     }

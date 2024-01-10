@@ -47,6 +47,49 @@
         <section id="main-section" class="section main-section">
             <div class="container">
                 <div class="main-section__content">
+                    <div class="main-section__scene">
+                        <div id="scene">
+                            <picture class="parallax-layer" data-depth="0.1">
+                                <source media="(min-width: 1360px)" srcset="<%= require('./img/mandala_xl.png') %>">
+                                <source media="(min-width: 920px)" srcset="<%= require('./img/mandala_lg.png') %>">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/mandala.png') %>" alt="" title="">
+                            </picture><!--mandala-->
+                            <picture class="parallax-layer" data-depth="0.1">
+                                <source media="(min-width: 1360px)" srcset="<%= require('./img/money_xl.png') %>">
+                                <source media="(min-width: 920px)" srcset="<%= require('./img/money_lg.png') %>">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money.png') %>" alt="" title="">
+                            </picture><!--money-->
+                            <picture class="parallax-layer" data-depth="0.2">
+                                <source media="(min-width: 1360px)" srcset="<%= require('./img/cards_xl.png') %>">
+                                <source media="(min-width: 920px)" srcset="<%= require('./img/cards_lg.png') %>">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/cards.png') %>" alt="" title="">
+                            </picture><!--cards-->
+                            <picture class="parallax-layer" data-depth="0.3">
+                                <source media="(min-width: 1360px)" srcset="<%= require('./img/roulette_xl.png') %>">
+                                <source media="(min-width: 920px)" srcset="<%= require('./img/roulette_lg.png') %>">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/roulette.png') %>" alt="" title="">
+                            </picture><!--roulette-->
+                            <picture class="parallax-layer d-none d-xl-block" data-depth="0.4">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/chips.png') %>" alt="" title="">
+                            </picture><!--chips-->
+                            <picture class="parallax-layer" data-depth="0.5">
+                                <source media="(min-width: 1360px)" srcset="<%= require('./img/dice_01_xl.png') %>">
+                                <source media="(min-width: 920px)" srcset="<%= require('./img/dice_01_lg.png') %>">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/dice_01.png') %>" alt="" title="">
+                            </picture><!--dice 1-->
+                            <picture class="parallax-layer" data-depth="0.5">
+                                <source media="(min-width: 1360px)" srcset="<%= require('./img/dice_02_xl.png') %>">
+                                <source media="(min-width: 920px)" srcset="<%= require('./img/dice_02_lg.png') %>">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/dice_02.png') %>" alt="" title="">
+                            </picture><!--dice 2-->
+                            <picture class="parallax-layer" data-depth="0.6">
+                                <source media="(min-width: 1360px)" srcset="<%= require('./img/stars_xl.png') %>">
+                                <source media="(min-width: 920px)" srcset="<%= require('./img/stars_lg.png') %>">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/stars.png') %>" alt="" title="">
+                            </picture><!--stars-->
+                        </div>
+                    </div>
+
                     <div class="main-section__welcome-text">
                         <h1 class="main-section__title">Partner with Magic, Profit with Mystiwin!</h1>
 
@@ -62,35 +105,6 @@
                                 <p class="main-section__indicators-text">Up to</p>
                                 <p class="main-section__indicators-val">50<span>%</span></p>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="main-section__scene">
-                        <div id="scene">
-                            <picture class="parallax-layer" data-depth="0.1">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/mandala.png') %>" alt="" title="">
-                            </picture><!--mandala-->
-                            <picture class="parallax-layer" data-depth="0.1">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money.png') %>" alt="" title="">
-                            </picture><!--money-->
-                            <picture class="parallax-layer" data-depth="0.2">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/cards.png') %>" alt="" title="">
-                            </picture><!--cards-->
-                            <picture class="parallax-layer" data-depth="0.3">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/roulette.png') %>" alt="" title="">
-                            </picture><!--roulette-->
-                            <picture class="parallax-layer" data-depth="0.4">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/chips.png') %>" alt="" title="">
-                            </picture><!--chips-->
-                            <picture class="parallax-layer" data-depth="0.5">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/dice_01.png') %>" alt="" title="">
-                            </picture><!--dice 1-->
-                            <picture class="parallax-layer" data-depth="0.5">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/dice_02.png') %>" alt="" title="">
-                            </picture><!--dice 2-->
-                            <picture class="parallax-layer" data-depth="0.6">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/stars_all.png') %>" alt="" title="">
-                            </picture><!--stars-->
                         </div>
                     </div>
 
@@ -167,7 +181,7 @@
         <section class="section decor-section">
             <div class="section-bg">
                 <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money-bg.png') %>" class="section-bg__img" alt="" title="">
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money_xl.png') %>" class="section-bg__img" alt="" title="">
                 </picture>
             </div>
 
