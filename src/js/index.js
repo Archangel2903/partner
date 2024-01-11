@@ -76,6 +76,12 @@ $(function () {
                     // dynamicBullets: true,
                     clickable: true
                 },
+                breakpoints: {
+                    1359: {
+                        slidesPerView: 1,
+                        spaceBetween: 40,
+                    },
+                },
                 /*scrollbar: {
                     el: '.swiper-scrollbar',
                 },*/

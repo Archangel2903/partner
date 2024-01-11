@@ -10,8 +10,19 @@
     padding-right: 20px;
     padding-left: 20px;
   }
+
+  .title-section {
+    font-size: 48px;
+  }
+  .content-style {
+    padding: 40px;
+  }
 }
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+  .title-section {
+    font-size: 56px;
+  }
+}
 
 // max-width
 @include media-breakpoint-down(lg) {}

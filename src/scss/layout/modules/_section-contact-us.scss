@@ -1,18 +1,20 @@
 .contact-section {
-  padding: 140px 0;
+  padding: 80px 0;
 
-  &__title {}
+  &__title {
+    margin: 0 0 20px;
+  }
   &__content {
     text-align: center;
   }
   &__sub-title {
     margin: 0 0 20px;
     color: #f79a00;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 700;
   }
   &__text {
-    margin: 0 0 80px;
+    margin: 0 0 40px;
     font-size: 22px;
   }
   &__form {
@@ -43,5 +45,24 @@
     textarea {
       height: 250px;
     }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .contact-section {
+    &__title {
+      margin: 0 0 40px;
+    }
+    &__sub-title {
+      font-size: 32px;
+    }
+    &__text {
+      margin: 0 0 80px;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .contact-section {
+    padding: 140px 0;
   }
 }

@@ -15,7 +15,7 @@
             <nav class="header__content">
                 <a href="#main-section" class="header__logo nav-blur-style">
                     <picture>
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
+                        <img src="<%= require('./img/logo.svg') %>" alt="" title="">
                     </picture>
                 </a>
 
@@ -134,8 +134,8 @@
                             <svg>
                                 <use xlink:href="img/spritemap.svg#sprite-lucky"></use>
                             </svg>
+                            <p class="about-section__block-title">Reliable Excellence</p>
                         </div>
-                        <p class="about-section__block-title">Reliable Excellence</p>
                         <p class="about-section__block-text">At MystiWin, reliability is more than a promise. It's a commitment etched into every facet of your gaming experience.
                             Our dedication to transparency ensures that you play with confidence, knowing that each spin is supported by swift payouts and unwavering support. Trust
                             is the foundation, built through clear communication, generous rewards, and a steadfast commitment to providing reliable services. MystiWin is your
@@ -150,8 +150,9 @@
                             <svg>
                                 <use xlink:href="img/spritemap.svg#sprite-cherry"></use>
                             </svg>
+                            <p class="about-section__block-title">Creative Thrills</p>
                         </div>
-                        <p class="about-section__block-title">Creative Thrills</p>
+
                         <p class="about-section__block-text">At MystiWin Casino, creativity is at the core of our approach to gaming. Our dedicated team stays ahead of industry
                             trends, ensuring we bring you the latest and most engaging games. Whether through innovative game features, unique promotional events, or creative
                             collaborations, MystiWin fosters an environment where your gaming experience constantly evolves. We believe that by embracing creativity, we can provide
@@ -166,8 +167,9 @@
                             <svg>
                                 <use xlink:href="img/spritemap.svg#sprite-crown"></use>
                             </svg>
+                            <p class="about-section__block-title">Extensive Experience</p>
                         </div>
-                        <p class="about-section__block-title">Extensive Experience</p>
+
                         <p class="about-section__block-text">We take pride in our wide selection of services and features, always looking to expand and enhance your gaming
                             experience. Your feedback is the compass guiding our growth. Share your opinions, desires, and suggestions, and become a vital part of our journey as we
                             continually broaden our offerings to surpass your expectations. MystiWin Casino invites you to embark on an exclusive, thrilling adventure where
@@ -500,16 +502,14 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__content">
-                <nav class="footer__logo-wrap">
-                    <a href="#main-section" class="footer__logo">
-                        <picture>
-                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
-                        </picture>
-                    </a>
-                </nav>
+            <nav class="footer__content">
+                <a href="#main-section" class="footer__logo">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
+                    </picture>
+                </a>
 
-                <nav class="footer__navigation">
+                <div class="footer__navigation">
                     <ul class="footer__navigation-list">
                         <li><a href="#about-us-section">About</a></li>
                         <li><a href="#commission-section">Commission</a></li>
@@ -521,10 +521,10 @@
                     <ul class="footer__navigation-list">
                         <li><a href="#">Terms & Conditions</a></li>
                     </ul>
-                </nav>
+                </div>
 
                 <p class="copyright">Copyright © 2023 All Rights Reserved. MystiPartner is owned and operated by MystiWin LTD</p>
-            </div>
+            </nav>
         </div>
     </footer>
     <!-- FOOTER END -->
