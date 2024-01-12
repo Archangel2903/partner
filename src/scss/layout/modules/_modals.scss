@@ -27,9 +27,10 @@
     overflow: hidden;
     outline: none !important;
     line-height: 24px;
+    z-index: 1;
   }
   .btn {
-    margin: 40px 0 0;
+    margin: 20px 0 0;
     &:not(:last-child) {
       margin: 40px 0;
     }
@@ -40,7 +41,9 @@
     border-radius: 0;
   }
   &-title {}
-  &-body {}
+  &-body {
+    padding: 0;
+  }
   &-footer {}
   &-backdrop {
     background: rgba(0, 0, 0, 0.50);
@@ -56,6 +59,9 @@
 }
 
 .registration-modal {
+  .modal-content {
+    padding: 20px;
+  }
   .registration-form {
     &__title-group {
       margin: 34px 0;
