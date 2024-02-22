@@ -1,93 +1,89 @@
 .about-section {
-  padding: 40px 0;
+  padding: 0 0 40px;
 
   &__title {
-    margin: 0 0 40px;
+    margin: 0 0 105px;
   }
   &__content {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-content: stretch;
     align-items: stretch;
-    gap: 40px;
+    gap: 105px;
   }
   &__block {
     position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
     width: 100%;
 
     &-head {
       position: relative;
       display: flex;
       flex-flow: row wrap;
-      justify-content: flex-start;
+      justify-content: center;
       align-content: center;
       align-items: center;
-      margin: 0 0 20px;
+      width: 128px;
+      padding: 14px;
+      margin: -80px auto 40px;
+      background: linear-gradient(to right, #9c782a 0%,#f5b832 50%,#9c782a 100%);
+      border-width: 2px;
+      border-radius: 100px;
+
+      &::before {
+        border-radius: 100px;
+      }
 
       img {
         position: absolute;
-        top: 30px;
-        left: -140px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: -1;
       }
       svg {
-        max-width: 150px;
-        width: 100%;
-        margin-right: 40px;
+        width: 96px;
+        height: 96px;
       }
     }
     &-title {
-      margin: 0;
+      margin: 0 0 20px;
       color: $main-second-color;
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 700;
+      text-align: center;
       text-transform: uppercase;
     }
     &-text {
       margin: 0;
-      font-size: 22px;
       font-weight: 400;
-      line-height: 33px;
     }
   }
 }
 
 @include media-breakpoint-up(lg) {
   .about-section {
-    padding: 80px 0;
-
-    &__block {
-      &-head {
-        margin: 0 0 40px;
-      }
-    }
+    padding: 0 0 62px;
   }
 }
 @include media-breakpoint-up(xl) {
   .about-section {
-    padding: 140px 0;
+    padding: 0 0 82px;
 
     &__title {
       margin: 0 0 80px;
     }
+    &__content {
+      gap: 20px;
+    }
     &__block {
       width: 31%;
       max-width: 480px;
-
-      &-head {
-        margin: 0;
-
-        img {
-          left: -4px;
-        }
-        svg {
-          margin: 0 auto;
-        }
-      }
-      &-title {
-        margin: 40px 0;
-      }
     }
   }
 }

@@ -1,20 +1,19 @@
 .main-section {
-  padding: 128px 0 0;
-  background: $gradient-bg;
-
   &__content {
     position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
+    align-content: center;
+    align-items: center;
     z-index: 0;
   }
   &__scene {
     width: 100%;
     max-width: 422px;
     position: relative;
+    margin: 0 0 18px;
+    background: $gradient-bg;
     z-index: -1;
 
     &::before {
@@ -76,10 +75,12 @@
   }
   &__welcome-text {
     width: 100%;
+    padding: 0;
   }
   &__title {
-    margin: 0 0 40px;
-    font-size: 36px;
+    max-width: 560px;
+    margin: 0 auto 40px;
+    font-size: 24px;
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
@@ -117,15 +118,8 @@
   }
   &__description {
     position: relative;
-    max-width: 1050px;
-    padding: 40px 20px;
-    margin: 60px auto 0;
-    background: $color-bg;
-    border: 2px solid #F79A00;
-    border-radius: 48px;
-    font-size: 22px;
+    margin: 40px auto;
     font-weight: 400;
-    line-height: 33px;
     z-index: 0;
 
     * {
@@ -144,18 +138,13 @@
 
 @include media-breakpoint-up(md) {
   .main-section {
-    &__welcome-text {
-      padding: 0 20px;
+    &__content {
+      justify-content: space-between;
     }
-  }
-}
-@include media-breakpoint-up(lg) {
-  .main-section {
-    padding: 160px 0 0;
-
     &__scene {
       order: 2;
       width: 50%;
+      margin: 0;
 
       &::before {
         width: 280px;
@@ -169,14 +158,14 @@
       .parallax-layer {
         &:nth-child(6) {
           img {
-            top: 85%;
-            left: 10%;
+            top: 75%;
+            left: 20%;
           }
         }
         &:nth-child(7) {
           img {
-            top: 80%;
-            left: 48%;
+            top: 70%;
+            left: 50%;
           }
         }
       }
@@ -184,28 +173,46 @@
     &__welcome-text {
       order: 1;
       width: 50%;
-      padding: 32px 32px 32px 0;
+      padding: 151px 0 71px;
     }
     &__title {
-      margin: 0 0 48px;
-      font-size: 48px;
+      font-size: 28px;
       text-align: left;
+    }
+    &__description {
+      order: 3;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .main-section {
+    &__scene {
+      .parallax-layer {
+        &:nth-child(6) {
+          img {
+            top: 80%;
+            left: 10%;
+          }
+        }
+      }
+    }
+    &__welcome-text {
+      padding: 144px 0 64px;
+    }
+    &__title {
+      font-size: 32px;
     }
     &__indicators {
       justify-content: flex-start;
       gap: 96px;
     }
     &__description {
-      order: 3;
-      padding: 40px;
-      margin: 110px auto 0;
+      margin: 60px 0;
     }
   }
 }
 @include media-breakpoint-up(xl) {
   .main-section {
-    padding: 224px 0 0;
-
     &__scene {
       &::before {
         width: 375px;
@@ -219,23 +226,24 @@
       .parallax-layer {
         &:nth-child(6) {
           img {
-            top: 110%;
-            left: 0;
+            top: 80%;
+            left: 10%;
           }
         }
         &:nth-child(7) {
           img {
-            top: 93%;
-            left: 48%;
+            top: 75%;
+            left: 50%;
           }
         }
       }
     }
     &__welcome-text {
-      padding: 32px 132px 32px 0;
+      padding: 220px 0 120px;
     }
     &__title {
-      font-size: 64px;
+      font-size: 40px;
+      margin: 0 0 60px;
     }
     &__indicators {
       &-val {
@@ -247,8 +255,31 @@
       }
     }
     &__description {
-      padding: 80px;
-      margin: 156px auto 0;
+      margin: 40px 0;
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .main-section {
+    &__scene {
+      .parallax-layer {
+        &:nth-child(6) {
+          img {
+            top: 85%;
+            left: 0;
+          }
+        }
+        &:nth-child(7) {
+          img {
+            top: 80%;
+            left: 50%;
+          }
+        }
+      }
+    }
+    &__title {
+      font-size: 48px;
+      margin: 0 0 80px;
     }
   }
 }

@@ -10,8 +10,8 @@ header.header {
   z-index: 100;
 }
 
-.header {
-  padding: 24px 0;
+.header   {
+  padding: 10px 0;
 
   &__content {
     display: flex;
@@ -21,11 +21,12 @@ header.header {
     align-items: center;
   }
   &__logo {
-    padding: 24px 20px;
+    padding: 9px 14px 9px 10px;
     margin-right: auto;
 
     img {
-      width: 180px;
+      width: 200px;
+      height: 36px;
     }
   }
   &__navigation {
@@ -34,7 +35,6 @@ header.header {
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    padding: 24px;
     margin-left: 10px;
     order: 1;
 
@@ -90,6 +90,12 @@ header.header {
       position: absolute;
       top: 0;
       right: -100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: stretch;
+      gap: 30px;
       width: 320px;
       padding: 35px 20px 35px 40px;
       margin: 0;
@@ -107,11 +113,7 @@ header.header {
         visibility: visible;
       }
     }
-    &-item {
-      &:not(:last-child) {
-        margin: 0 0 30px 0;
-      }
-    }
+    &-item {}
     &-link {
       color: $main-second-color;
       font-weight: 700;
@@ -125,21 +127,10 @@ header.header {
   }
 }
 
-@include media-breakpoint-up(lg) {
-  .header {
-    &__logo {
-      padding: 12px;
-
-      img {
-        width: auto;
-      }
-    }
-  }
-}
 @include media-breakpoint-up(xl) {
   .header {
     &__navigation {
-      padding: 16px 12px;
+      padding: 17px 24px;
       margin: 0 10px 0 0;
       order: 0;
 
@@ -148,22 +139,16 @@ header.header {
       }
       &-list {
         position: static;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
+        flex-direction: row;
         align-content: center;
         align-items: center;
+        gap: 32px;
         width: auto;
-        padding: 13px 28px;
+        padding: 0;
         background: none;
         border: none;
         opacity: 1;
         visibility: visible;
-      }
-      &-item {
-        &:not(:last-child) {
-          margin: 0 40px 0 0;
-        }
       }
     }
   }

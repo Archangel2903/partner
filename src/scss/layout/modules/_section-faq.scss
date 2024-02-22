@@ -3,7 +3,7 @@
   background: $gradient-bg;
 
   &__title {
-    margin: 0 0 30px;
+    margin: 0 0 40px;
   }
   &__content {
 
@@ -11,7 +11,7 @@
   &__block {
     position: relative;
     max-width: 1520px;
-    padding: 40px 20px;
+    padding: 20px;
     margin: 0 auto;
 
     &:not(:last-child) {
@@ -31,14 +31,12 @@
     &-title {
       margin: 0;
       color: $main-second-color;
-      font-size: 28px;
+      font-size: 16px;
       font-weight: 700;
       text-transform: uppercase;
     }
     &-body {
-      padding: 30px 0 0;
-      font-size: 22px;
-      line-height: 33px;
+      padding: 20px 0 0;
 
       a {
         color: $main-second-color;
@@ -59,15 +57,12 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
   .faq-section {
-    padding: 80px 0;
-
-    &__title {
-      margin: 0 0 60px;
-    }
     &__block {
-
+      &-title {
+        font-size: 20px;
+      }
       &-trigger {
         position: relative;
         display: block;
@@ -95,7 +90,6 @@
           transform: translate(-50%, -50%) rotate(90deg);
         }
       }
-
       &.active {
         .faq-section__block-trigger {
           background: $main-second-color;
@@ -106,10 +100,5 @@
         }
       }
     }
-  }
-}
-@include media-breakpoint-up(xl) {
-  .faq-section {
-    padding: 140px 0;
   }
 }

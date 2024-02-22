@@ -1,15 +1,11 @@
 .commission-section {
-  padding: 60px 0 40px;
-  background: var(--gray-bg);
+  padding: 0 0 40px;
 
   &__title {}
   &__sub-title {
     max-width: 1140px;
-    margin: 0 auto 20px;
-    font-size: 22px;
+    margin: 0 0 40px;
     font-weight: 400;
-    line-height: 33px;
-    text-align: center;
   }
   &__content {
     .ui-tabs {
@@ -22,7 +18,7 @@
           justify-content: center;
           align-content: stretch;
           align-items: stretch;
-          gap: 10px;
+          gap: 20px;
           padding: 0;
           margin: 0 0 30px;
 
@@ -33,8 +29,6 @@
 
         &-tab {
           margin: 0;
-
-
 
           &:nth-child(1) {
             .commission-section__button::before {
@@ -87,9 +81,8 @@
           align-items: center;
           padding: 0;
           color: $main-second-color;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 700;
-          line-height: 48px;
 
           .commission-section__button {
             position: relative;
@@ -154,11 +147,8 @@
         }
 
         &-panel {
-          max-width: 1185px;
           padding: 0;
           margin: 0 auto;
-          font-size: 22px;
-          line-height: 33px;
 
           ul {
             list-style: disc;
@@ -171,17 +161,11 @@
 
 @include media-breakpoint-up(lg) {
   .commission-section {
-    padding: 80px 0;
-
-    &__sub-title {
-    margin: 0 auto 40px;
-    }
+    &__sub-title {}
     &__content {
       .ui-tabs {
         .ui-tabs {
-          &-nav {
-            gap: 40px;
-          }
+          &-nav {}
           &-tab {
             &::after {
               content: '\1403';
@@ -224,22 +208,9 @@
           }
           &-panel {
             .commission-section__tab-content {
-              padding: 40px 0 0;
-              border-top: 1px solid transparent;
-              background: linear-gradient(to right, transparent, $main-second-color, transparent);
+              padding: 0;
               position: relative;
               z-index: 0;
-
-              &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: var(--gray-bg);
-                z-index: -1;
-              }
             }
           }
         }
@@ -247,43 +218,13 @@
     }
   }
 }
-
 @include media-breakpoint-up(xl) {
   .commission-section {
-    padding: 160px 0 140px;
-
-    &__sub-title {
-      margin: 0 auto 80px;
-    }
+    &__sub-title {}
     &__content {
       .ui-tabs {
         .ui-tabs {
-          &-anchor {
-            font-size: 28px;
-
-            .commission-section__button {
-              width: 266px;
-              height: 266px;
-              margin: 48px 0 70px;
-              font-size: 48px;
-
-              &::before {
-                width: 200px;
-                height: 200px;
-              }
-              &::after {
-                width: 266px;
-                height: 266px;
-              }
-              & > span {
-                font-size: 16px;
-              }
-              svg {
-                width: 96px;
-                height: 96px;
-              }
-            }
-          }
+          &-anchor {}
         }
       }
     }

@@ -1,5 +1,5 @@
 .decor-section {
-  min-height: 270px;
+  min-height: 135px;
   background: $main-third-color;
   z-index: 1;
 
@@ -9,22 +9,20 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    &:nth-child(1) {
-      img {
-        width: 760px;
-      }
-    }
     &:nth-child(2) {
       img {
-        width: 520px;
+        width: 260px;
+      }
+    }
+    &:nth-child(3) {
+      img {
+        width: 380px;
       }
     }
   }
 
   .section-bg {
-    &__img {
-      object-fit: none;
-    }
+    &__img {}
     &::after {
       opacity: 1;
       background: linear-gradient(90deg, rgba(24, 25, 30, 0.60) 0%, transparent 33.33%, transparent 66.67%, rgba(24, 25, 30, 0.60) 100%);;
@@ -32,37 +30,40 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
   .decor-section {
-    min-height: 360px;
+    min-height: 202px;
 
     &__image {
-      &:nth-child(1) {
-        img {
-          width: 1010px;
-        }
-      }
       &:nth-child(2) {
         img {
-          width: 692px;
+          width: 390px;
+        }
+      }
+      &:nth-child(3) {
+        img {
+          width: 568px;
         }
       }
     }
   }
 }
+@include media-breakpoint-up(lg) {
+
+}
 @include media-breakpoint-up(xl) {
   .decor-section {
-    min-height: 480px;
+    min-height: 270px;
 
     &__image {
-      &:nth-child(1) {
-        img {
-          width: auto;
-        }
-      }
       &:nth-child(2) {
         img {
-          width: auto;
+          width: 518px;
+        }
+      }
+      &:nth-child(3) {
+        img {
+          width: 758px;
         }
       }
     }

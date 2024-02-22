@@ -11,7 +11,7 @@
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container-fluid">
+        <div class="container">
             <nav class="header__content">
                 <a href="#main-section" class="header__logo nav-blur-style">
                     <picture>
@@ -33,10 +33,7 @@
                     </ul>
                 </div>
 
-                <div class="header__right-buttons nav-blur-style d-none d-md-block">
-                    <a href="#" class="header__button btn btn-primary" data-toggle="modal" data-target="#registrationModal">Registration</a>
-                    <!--<button type="button" class="header__button btn btn-primary" data-toggle="modal" data-target="#signinModal"><span>Sign in</span></button>-->
-                </div>
+                <a href="#" class="header__button btn btn-primary d-none d-xl-block" data-toggle="modal" data-target="#registrationModal">Registration</a>
             </nav>
         </div>
     </header>
@@ -50,41 +47,41 @@
                     <div class="main-section__scene">
                         <div id="scene">
                             <picture class="parallax-layer" data-depth="0.1">
-                                <source media="(min-width: 1360px)" srcset="<%= require('./img/mandala_xl.png') %>">
-                                <source media="(min-width: 920px)" srcset="<%= require('./img/mandala_lg.png') %>">
+                                <source media="(min-width: 1440px)" srcset="<%= require('./img/mandala_xl.png') %>">
+                                <source media="(min-width: 992px)" srcset="<%= require('./img/mandala_lg.png') %>">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/mandala.png') %>" alt="" title="">
                             </picture><!--mandala-->
                             <picture class="parallax-layer" data-depth="0.1">
-                                <source media="(min-width: 1360px)" srcset="<%= require('./img/money_xl.png') %>">
-                                <source media="(min-width: 920px)" srcset="<%= require('./img/money_lg.png') %>">
+                                <source media="(min-width: 1440px)" srcset="<%= require('./img/money_xl.png') %>">
+                                <source media="(min-width: 992px)" srcset="<%= require('./img/money_lg.png') %>">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money.png') %>" alt="" title="">
                             </picture><!--money-->
                             <picture class="parallax-layer" data-depth="0.2">
-                                <source media="(min-width: 1360px)" srcset="<%= require('./img/cards_xl.png') %>">
-                                <source media="(min-width: 920px)" srcset="<%= require('./img/cards_lg.png') %>">
+                                <source media="(min-width: 1440px)" srcset="<%= require('./img/cards_xl.png') %>">
+                                <source media="(min-width: 992px)" srcset="<%= require('./img/cards_lg.png') %>">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/cards.png') %>" alt="" title="">
                             </picture><!--cards-->
                             <picture class="parallax-layer" data-depth="0.3">
-                                <source media="(min-width: 1360px)" srcset="<%= require('./img/roulette_xl.png') %>">
-                                <source media="(min-width: 920px)" srcset="<%= require('./img/roulette_lg.png') %>">
+                                <source media="(min-width: 1440px)" srcset="<%= require('./img/roulette_xl.png') %>">
+                                <source media="(min-width: 992px)" srcset="<%= require('./img/roulette_lg.png') %>">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/roulette.png') %>" alt="" title="">
                             </picture><!--roulette-->
                             <picture class="parallax-layer d-none d-xl-block" data-depth="0.4">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/chips.png') %>" alt="" title="">
                             </picture><!--chips-->
                             <picture class="parallax-layer" data-depth="0.5">
-                                <source media="(min-width: 1360px)" srcset="<%= require('./img/dice_01_xl.png') %>">
-                                <source media="(min-width: 920px)" srcset="<%= require('./img/dice_01_lg.png') %>">
+                                <source media="(min-width: 1440px)" srcset="<%= require('./img/dice_01_xl.png') %>">
+                                <source media="(min-width: 992px)" srcset="<%= require('./img/dice_01_lg.png') %>">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/dice_01.png') %>" alt="" title="">
                             </picture><!--dice 1-->
                             <picture class="parallax-layer" data-depth="0.5">
-                                <source media="(min-width: 1360px)" srcset="<%= require('./img/dice_02_xl.png') %>">
-                                <source media="(min-width: 920px)" srcset="<%= require('./img/dice_02_lg.png') %>">
+                                <source media="(min-width: 1440px)" srcset="<%= require('./img/dice_02_xl.png') %>">
+                                <source media="(min-width: 992px)" srcset="<%= require('./img/dice_02_lg.png') %>">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/dice_02.png') %>" alt="" title="">
                             </picture><!--dice 2-->
                             <picture class="parallax-layer" data-depth="0.6">
-                                <source media="(min-width: 1360px)" srcset="<%= require('./img/stars_xl.png') %>">
-                                <source media="(min-width: 920px)" srcset="<%= require('./img/stars_lg.png') %>">
+                                <source media="(min-width: 1440px)" srcset="<%= require('./img/stars_xl.png') %>">
+                                <source media="(min-width: 992px)" srcset="<%= require('./img/stars_lg.png') %>">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/stars.png') %>" alt="" title="">
                             </picture><!--stars-->
                         </div>
@@ -121,85 +118,10 @@
             </div>
         </section>
 
-        <section id="about-us-section" class="section about-section">
-            <div class="container">
-                <h2 class="about-section__title title-section">Who <span>we are</span></h2>
-
-                <div class="about-section__content">
-                    <div class="about-section__block content-style">
-                        <div class="about-section__block-head">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/lights.png') %>" alt="" title="">
-                            </picture>
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-lucky"></use>
-                            </svg>
-                            <p class="about-section__block-title">Reliable Excellence</p>
-                        </div>
-                        <p class="about-section__block-text">At MystiWin, reliability is more than a promise. It's a commitment etched into every facet of your gaming experience.
-                            Our dedication to transparency ensures that you play with confidence, knowing that each spin is supported by swift payouts and unwavering support. Trust
-                            is the foundation, built through clear communication, generous rewards, and a steadfast commitment to providing reliable services. MystiWin is your
-                            secure haven in the gaming world</p>
-                    </div>
-
-                    <div class="about-section__block content-style">
-                        <div class="about-section__block-head">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/lights.png') %>" alt="" title="">
-                            </picture>
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-cherry"></use>
-                            </svg>
-                            <p class="about-section__block-title">Creative Thrills</p>
-                        </div>
-
-                        <p class="about-section__block-text">At MystiWin Casino, creativity is at the core of our approach to gaming. Our dedicated team stays ahead of industry
-                            trends, ensuring we bring you the latest and most engaging games. Whether through innovative game features, unique promotional events, or creative
-                            collaborations, MystiWin fosters an environment where your gaming experience constantly evolves. We believe that by embracing creativity, we can provide
-                            you with an entertaining and dynamic gaming atmosphere that goes beyond the ordinary</p>
-                    </div>
-
-                    <div class="about-section__block content-style">
-                        <div class="about-section__block-head">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/lights.png') %>" alt="" title="">
-                            </picture>
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-crown"></use>
-                            </svg>
-                            <p class="about-section__block-title">Extensive Experience</p>
-                        </div>
-
-                        <p class="about-section__block-text">We take pride in our wide selection of services and features, always looking to expand and enhance your gaming
-                            experience. Your feedback is the compass guiding our growth. Share your opinions, desires, and suggestions, and become a vital part of our journey as we
-                            continually broaden our offerings to surpass your expectations. MystiWin Casino invites you to embark on an exclusive, thrilling adventure where
-                            fortunes are revealed, innovation thrives, and your gaming preferences are at the forefront. Your presence completes the narrative, making MistyWin not
-                            just a casino but your extraordinary pathway to gaming delight</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section decor-section">
-            <div class="section-bg">
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money_xl.png') %>" class="section-bg__img" alt="" title="">
-                </picture>
-            </div>
-
-            <picture class="decor-section__image">
-                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor_slot.png') %>" alt="" title="">
-            </picture>
-
-            <picture class="decor-section__image">
-                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor_stars.png') %>" alt="" title="">
-            </picture>
-        </section>
-
         <section id="commission-section" class="section commission-section">
             <div class="container">
                 <h2 class="commission-section__title title-section">commission <span>plans</span></h2>
-                <p class="commission-section__sub-title text-center">Any of the commission plans is a subject to an individual alignment. You should contact our affiliate managers
+                <p class="commission-section__sub-title">Any of the commission plans is a subject to an individual alignment. You should contact our affiliate managers
                     in order to negotiate the conditions of collaboration and sign up a partnership agreement with us</p>
 
                 <div class="commission-section__content">
@@ -262,6 +184,82 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="about-us-section" class="section about-section">
+            <div class="container">
+                <h2 class="about-section__title title-section">Who <span>we are</span></h2>
+
+                <div class="about-section__content">
+                    <div class="about-section__block content-style">
+                        <div class="about-section__block-head content-style">
+                            <picture>
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/lights.png') %>" alt="" title="">
+                            </picture>
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-lucky"></use>
+                            </svg>
+                        </div>
+
+                        <p class="about-section__block-title">Reliable Excellence</p>
+                        <p class="about-section__block-text">At MystiWin, reliability is more than a promise. It's a commitment etched into every facet of your gaming experience.
+                            Our dedication to transparency ensures that you play with confidence, knowing that each spin is supported by swift payouts and unwavering support. Trust
+                            is the foundation, built through clear communication, generous rewards, and a steadfast commitment to providing reliable services. MystiWin is your
+                            secure haven in the gaming world</p>
+                    </div>
+
+                    <div class="about-section__block content-style">
+                        <div class="about-section__block-head content-style">
+                            <picture>
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/lights.png') %>" alt="" title="">
+                            </picture>
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-cherry"></use>
+                            </svg>
+                        </div>
+
+                        <p class="about-section__block-title">Creative Thrills</p>
+                        <p class="about-section__block-text">At MystiWin Casino, creativity is at the core of our approach to gaming. Our dedicated team stays ahead of industry
+                            trends, ensuring we bring you the latest and most engaging games. Whether through innovative game features, unique promotional events, or creative
+                            collaborations, MystiWin fosters an environment where your gaming experience constantly evolves. We believe that by embracing creativity, we can provide
+                            you with an entertaining and dynamic gaming atmosphere that goes beyond the ordinary</p>
+                    </div>
+
+                    <div class="about-section__block content-style">
+                        <div class="about-section__block-head content-style">
+                            <picture>
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/lights.png') %>" alt="" title="">
+                            </picture>
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-crown"></use>
+                            </svg>
+                        </div>
+
+                        <p class="about-section__block-title">Extensive Experience</p>
+                        <p class="about-section__block-text">We take pride in our wide selection of services and features, always looking to expand and enhance your gaming
+                            experience. Your feedback is the compass guiding our growth. Share your opinions, desires, and suggestions, and become a vital part of our journey as we
+                            continually broaden our offerings to surpass your expectations. MystiWin Casino invites you to embark on an exclusive, thrilling adventure where
+                            fortunes are revealed, innovation thrives, and your gaming preferences are at the forefront. Your presence completes the narrative, making MistyWin not
+                            just a casino but your extraordinary pathway to gaming delight</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section decor-section">
+            <div class="section-bg">
+                <picture>
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money_xl.png') %>" class="section-bg__img" alt="" title="">
+                </picture>
+            </div>
+
+            <picture class="decor-section__image">
+                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor_slot.png') %>" alt="" title="">
+            </picture>
+
+            <picture class="decor-section__image">
+                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor_stars.png') %>" alt="" title="">
+            </picture>
         </section>
 
         <section id="faq-section" class="section faq-section">
